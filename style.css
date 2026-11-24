@@ -116,14 +116,14 @@ body { padding: clamp(8px, 2vw, 24px); }
 .tg-err { color: var(--tg-bad); font-size: 13px; }
 
 /* Tabs: copper active tab, outlined inactive tabs, copper baseline */
-.tg-tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px; align-items: end; border-bottom: 5px solid var(--tg-copper); border-radius: 0 0 3px 3px; margin-bottom: -8px; }
-.tg-tabs button { font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 10px 14px; white-space: nowrap;
+.tg-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; align-items: end; border-bottom: 5px solid var(--tg-copper); border-radius: 0 0 3px 3px; margin-bottom: -8px; }
+.tg-tabs button { font: inherit; font-size: clamp(13.5px, 1.45vw, 16px); line-height: 1.15; text-align: center; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 8px 10px;
   color: var(--tg-gold); background: rgba(58, 31, 16, 0.95); border: 2px solid var(--tg-copper); border-bottom: 0; border-radius: 12px 12px 0 0; }
 .tg-tabs button svg { width: 20px; height: 20px; flex: none; }
 .tg-tabs button:hover { background: rgba(200, 116, 58, 0.32); color: #fff1df; }
 .tg-tabs button.on { background: var(--tg-copper); color: #fff6ea; min-height: 56px; }
 .tg-tabs button:focus-visible { outline: 2px solid #fff1df; outline-offset: 2px; }
-@media (max-width: 560px) { .tg-tabs { border-bottom: 0; } .tg-tabs button { border-bottom: 2px solid var(--tg-copper); border-radius: 10px; font-size: 15px; } }
+@media (max-width: 600px) { .tg-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 0; margin-bottom: 0; } .tg-tabs button { border-bottom: 2px solid var(--tg-copper); border-radius: 10px; font-size: 14.5px; min-height: 48px; } .tg-tabs button.on { min-height: 48px; } }
 .tg-tab { display: flex; flex-direction: column; gap: 28px; }
 .tg-tab[hidden] { display: none; }
 
