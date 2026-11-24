@@ -163,8 +163,15 @@ def compile_rules():
     return tribes, issues, tribal
 
 
-def tag(story, rules):
+def tag(story, rules, known_states=None):
     tribes, issues, tribal = rules
+    if not story.get("summary") and story.get("tribes") is not None and story.get("issues") is not None:
+        # Stored story without its summary text (e.g. seeded from the original dashboard): keep its tags.
+        kept = dict(story)
+        names = [x for x in story["tribes"].split("; ") if x]
+        lookup = {n: s for n, s, _, _ in tribes}
+        kept["_states"] = {n: lookup.get(n) or (known_states or {}).get(n, "") for n in names}
+        return kept
     text = story["headline"] + ". " + (story.get("summary") or "")
     found = []
     for name, state, pats, ctx in tribes:
@@ -223,7 +230,8 @@ def main():
     known = {s["story_id"] for s in stories}
     raw = {sid: v for sid, v in cache.items()}
     for s in stories:
-        raw.setdefault(s["story_id"], {k: s[k] for k in ("story_id", "date", "headline", "url") if k in s} | {"summary": s.get("summary", "")})
+        raw.setdefault(s["story_id"], {k: s[k] for k in ("story_id", "date", "headline", "url", "tribes", "issues") if k in s} | {"summary": s.get("summary", "")})
+    known_states = {m["name"]: m.get("state", "") for m in load("news_mentions.json", []) if m.get("kind") == "Tribe"}
 
     fetched = 0
     if not args.retag:
@@ -263,7 +271,7 @@ def main():
         if key in seen_headlines:
             continue
         seen_headlines.add(key)
-        t = tag(v, rules)
+        t = tag(v, rules, known_states)
         if t:
             out.append(t)
     mentions = build_mentions(out)
