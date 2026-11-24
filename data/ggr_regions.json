@@ -1,0 +1,10 @@
+[
+ {"region": "Sacramento", "operations_fy2025": 88, "operations_fy2024": 87, "ggr_fy2025": 12631303247, "ggr_fy2024": 12135475969, "pct_change": 4.1},
+ {"region": "D.C.", "operations_fy2025": 46, "operations_fy2024": 45, "ggr_fy2025": 11218298614, "ggr_fy2024": 10218407815, "pct_change": 9.8},
+ {"region": "St. Paul", "operations_fy2025": 101, "operations_fy2024": 97, "ggr_fy2025": 5320261193, "ggr_fy2024": 5171624189, "pct_change": 2.9},
+ {"region": "Portland", "operations_fy2025": 58, "operations_fy2024": 55, "ggr_fy2025": 4943983904, "ggr_fy2024": 4694100529, "pct_change": 5.3},
+ {"region": "Phoenix", "operations_fy2025": 54, "operations_fy2024": 53, "ggr_fy2025": 4211135056, "ggr_fy2024": 3999888645, "pct_change": 5.3},
+ {"region": "Oklahoma City", "operations_fy2025": 80, "operations_fy2024": 78, "ggr_fy2025": 3744841561, "ggr_fy2024": 3624523166, "pct_change": 3.3},
+ {"region": "Tulsa", "operations_fy2025": 74, "operations_fy2024": 73, "ggr_fy2025": 3653169798, "ggr_fy2024": 3564148943, "pct_change": 2.5},
+ {"region": "Rapid City", "operations_fy2025": 44, "operations_fy2024": 44, "ggr_fy2025": 439790197, "ggr_fy2024": 443861592, "pct_change": -0.9}
+]

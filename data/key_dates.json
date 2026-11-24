@@ -1,0 +1,11 @@
+[
+ {"sort_date": "2026-11-24", "when": "Nov 24", "event": "Michigan contempt hearing against Kalshi", "jurisdiction": "Michigan", "type": "Court", "related": "Kalshi v. Michigan"},
+ {"sort_date": "2026-11-25", "when": "Nov 25", "event": "Kalshi compliance report due under tribal injunction", "jurisdiction": "California", "type": "Court", "related": "Blue Lake Rancheria et al. v. Kalshi & Robinhood"},
+ {"sort_date": "2026-11-25", "when": "Nov 25", "event": "Polymarket closes remaining sports positions in Michigan", "jurisdiction": "Michigan", "type": "Policy", "related": "Michigan — Polymarket sports contracts wind-down"},
+ {"sort_date": "2026-11-30", "when": "Nov 30", "event": "Louisiana state-court preliminary injunction hearing", "jurisdiction": "Louisiana", "type": "Court", "related": "Louisiana v. prediction markets / CFTC v. Louisiana"},
+ {"sort_date": "2026-12-04", "when": "Dec 4", "event": "Kalshi arraignment on Utah criminal charges", "jurisdiction": "Utah", "type": "Court", "related": "Utah v. Kalshi / CFTC v. Utah"},
+ {"sort_date": "2026-12-07", "when": "Dec 7", "event": "Kalshi's response due to New Jersey's Supreme Court petition", "jurisdiction": "U.S. Supreme Court", "type": "Court", "related": "KalshiEX v. Flaherty (New Jersey)"},
+ {"sort_date": "2026-12-17", "when": "Dec 17", "event": "New York subpoena-enforcement hearing", "jurisdiction": "New York", "type": "Court", "related": "Kalshi v. New York"},
+ {"sort_date": "2027-01-01", "when": "Jan 1", "event": "North Carolina 6% prediction market tax takes effect", "jurisdiction": "North Carolina", "type": "Policy", "related": "North Carolina prediction market tax (6%)"},
+ {"sort_date": "2027-01-04", "when": "Early Jan", "event": "New York preliminary injunction hearing against Kalshi", "jurisdiction": "New York", "type": "Court", "related": "New York v. Kalshi / CFTC v. New York"}
+]

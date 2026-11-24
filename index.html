@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tribal Gaming Dashboard · Pechanga.net</title>
+<meta name="description" content="Free dashboard from Pechanga.net tracking prediction-market court cases, tribal gaming policy, NIGC revenue and which tribes are in the news.">
+<meta property="og:title" content="Tribal Gaming Dashboard · Pechanga.net">
+<meta property="og:description" content="Court cases, policy, revenue and the tribes making news, in one place. Free, no registration.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#120a06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="tg-skip" href="#tab-overview">Skip to dashboard</a>
+<div class="tg">
+  <header class="tg-hero" id="overview">
+    <p class="tg-kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 12a1 1 0 0 1 1 1 2 2 0 0 1-2 2 3 3 0 0 1-3-3 4 4 0 0 1 4-4 5 5 0 0 1 5 5 6 6 0 0 1-6 6 7 7 0 0 1-7-7 8 8 0 0 1 8-8"/></svg><a href="https://pechanga.net/">Pechanga.net</a> · Tribal Gaming Intelligence</p>
+    <h1>Tribal Gaming Dashboard</h1>
+    <p class="tg-lede">Tribal gaming revenue reached a record <b>$<span data-draw="lede-ggr">—</span> billion</b> in FY2025, up <b data-draw="lede-chg">—</b> year over year. In the prediction-market fight, the most recent rulings tracked here favor states or tribes in <b data-draw="lede-wins">—</b> of <b data-draw="lede-decided">—</b> decided cases.</p>
+    <p class="tg-asof" data-draw="asof">Data as of —</p>
+  </header>
+
+  <nav class="tg-tabs" role="tablist" aria-label="Dashboard sections">
+    <button type="button" role="tab" class="on" aria-selected="true" aria-controls="tab-overview" data-tab="tab-overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Overview</button>
+    <button type="button" role="tab" aria-selected="false" aria-controls="tab-courts" data-tab="tab-courts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M7 21h10"/><path d="M4 7h16"/><path d="M6 7l-3 7a3 3 0 0 0 6 0z"/><path d="M18 7l-3 7a3 3 0 0 0 6 0z"/></svg>Courts And Policy</button>
+    <button type="button" role="tab" aria-selected="false" aria-controls="tab-tribes" data-tab="tab-tribes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="15" height="16" rx="1.5"/><path d="M18 8h3v10a2 2 0 0 1-2 2"/><path d="M7 8h7"/><path d="M7 12h7"/><path d="M7 16h4"/></svg>Tribes In The News</button>
+    <button type="button" role="tab" aria-selected="false" aria-controls="tab-revenue" data-tab="tab-revenue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M6 17v-5"/><path d="M11 17V8"/><path d="M16 17v-7"/><path d="M21 17V5"/></svg>Revenue</button>
+  </nav>
+
+  <div class="tg-tab" id="tab-overview" role="tabpanel">
+    <section class="tg-kpis" id="kpis">
+      <div class="tg-card tg-kpi">
+        <svg class="tg-kpi-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M24 24a2 2 0 0 1 2 2 4 4 0 0 1-4 4 6 6 0 0 1-6-6 8 8 0 0 1 8-8 10 10 0 0 1 10 10 12 12 0 0 1-12 12 14 14 0 0 1-14-14 16 16 0 0 1 16-16"/></svg>
+        <p class="tg-kpi-label">Tribal gross gaming revenue · FY2025</p>
+        <p class="tg-kpi-value">$<span data-draw="kpi-ggr">—</span>B</p>
+        <p class="tg-kpi-sub"><span class="tg-good" data-draw="kpi-chg">—</span> vs. FY2024 · a record</p>
+      </div>
+      <div class="tg-card tg-kpi">
+        <svg class="tg-kpi-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="24" cy="24" r="7"/><circle cx="24" cy="24" r="2"/><path d="M24 5v7M24 36v7M5 24h7M36 24h7M10.5 10.5l5 5M32.5 32.5l5 5M37.5 10.5l-5 5M15.5 32.5l-5 5"/></svg>
+        <p class="tg-kpi-label">Tribal gaming operations · FY2025</p>
+        <p class="tg-kpi-value" data-draw="kpi-ops">—</p>
+        <p class="tg-kpi-sub">Across 8 NIGC regions</p>
+      </div>
+      <div class="tg-card tg-kpi">
+        <svg class="tg-kpi-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 8v32M14 40h20M8 15h32M12 15l-5 11a5 5 0 0 0 10 0zM36 15l-5 11a5 5 0 0 0 10 0z"/></svg>
+        <p class="tg-kpi-label">Prediction-market cases tracked</p>
+        <p class="tg-kpi-value" data-draw="kpi-cases">—</p>
+        <p class="tg-kpi-sub"><span data-draw="kpi-tribal">—</span> brought by tribes</p>
+      </div>
+      <div class="tg-card tg-kpi">
+        <svg class="tg-kpi-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16l6 6 6-6 6 6 6-6 6 6 6-6M6 30l6 6 6-6 6 6 6-6 6 6 6-6"/></svg>
+        <p class="tg-kpi-label">Policy items on the watch list</p>
+        <p class="tg-kpi-value" data-draw="kpi-policy">—</p>
+        <p class="tg-kpi-sub"><span data-draw="kpi-opposed">—</span> opposed by tribal groups</p>
+      </div>
+    </section>
+
+    <div class="ov-grid">
+      <div class="tg-card" id="key-dates">
+        <h3>Key Dates Ahead</h3>
+        <ul class="kd-list" data-draw="key-dates"></ul>
+        <div class="tg-more" data-draw="key-dates-more"></div>
+      </div>
+      <div class="tg-card" id="news-map">
+        <h3>Where Tribes Are In The News · Last 30 Days</h3>
+        <p class="tin-hint">Brighter copper means more Pechanga.net stories naming that state's tribes. Select a state to see its tribes.</p>
+        <div data-draw="news-map"></div>
+        <div data-draw="news-map-detail"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tg-tab" id="tab-courts" role="tabpanel" hidden>
+    <section class="tg-section" id="litigation">
+      <div class="tg-h2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4v24M8 28h16M5 9h22M9 9l-4 9a4 4 0 0 0 8 0zM23 9l-4 9a4 4 0 0 0 8 0z"/></svg><h2>Prediction Markets Litigation Tracker</h2></div>
+      <hr class="tg-rule">
+      <p class="tg-note">Where every major case over sports event contracts stands, including tribal suits under the Indian Gaming Regulatory Act (IGRA) and tribal-state compacts, the state-versus-Kalshi appeals that shape them, and the CFTC's suits against states. “Latest ruling favors” reflects the most recent decision, not a final judgment.</p>
+      <div class="tg-toolbar">
+        <label for="tg-case-filter">Show</label>
+        <select class="dash-select" id="tg-case-filter">
+          <option value="">All cases</option>
+          <option value="Tribal">Tribal suits</option>
+          <option value="State regulation">State regulation</option>
+          <option value="State vs. federal">State vs. federal</option>
+        </select>
+      </div>
+      <div class="tg-scroll">
+        <table class="tg-table">
+          <thead><tr><th>Case</th><th>Court</th><th>Latest action</th><th>Date</th><th>Latest ruling favors</th><th>What's next</th></tr></thead>
+          <tbody data-draw="cases"></tbody>
+        </table>
+      </div>
+      <div class="tg-more" data-draw="cases-more"></div>
+    </section>
+
+    <svg class="tg-divider" viewBox="0 0 600 26" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 13h180l8-8h60l8 8h88l8 8h60l8-8h180"/><circle cx="188" cy="5" r="2.5" fill="currentColor"/><circle cx="256" cy="13" r="2.5" fill="currentColor"/><circle cx="352" cy="21" r="2.5" fill="currentColor"/><circle cx="412" cy="21" r="2.5" fill="currentColor"/></svg>
+
+    <section class="tg-section" id="policy">
+      <div class="tg-h2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h14l6 6v18H6z"/><path d="M20 4v6h6M10 15h12M10 20h12M10 25h7"/></svg><h2>Legislation &amp; Rulemaking Watch</h2></div>
+      <hr class="tg-rule">
+      <p class="tg-note">Federal bills, CFTC rulemakings and state actions that affect tribal gaming and sovereignty, with the position of tribal groups.</p>
+      <div class="tg-scroll">
+        <table class="tg-table">
+          <thead><tr><th>Item</th><th>Level</th><th>Status</th><th>Tribal position</th><th>Why it matters</th><th>Next step</th></tr></thead>
+          <tbody data-draw="policy"></tbody>
+        </table>
+      </div>
+      <div class="tg-more" data-draw="policy-more"></div>
+    </section>
+  </div>
+
+  <div class="tg-tab" id="tab-revenue" role="tabpanel" hidden>
+    <section class="tg-section" id="revenue">
+      <div class="tg-h2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 26h24M7 22l6-7 5 4 9-11"/><path d="M22 8h5v5"/></svg><h2>Tribal Gaming Revenue Scorecard</h2></div>
+      <hr class="tg-rule">
+      <p class="tg-note">Gross gaming revenue (GGR) is the amount wagered minus winnings paid out, as reported to the National Indian Gaming Commission. NIGC fiscal years run October to September; FY2025 figures were released July 21, 2026.</p>
+      <div class="tg-grid2">
+        <div class="tg-card tg-chart">
+          <h3>Annual GGR, FY2019–FY2025 ($ Billions)</h3>
+          <div data-draw="trend"></div>
+        </div>
+        <div class="tg-card tg-chart">
+          <h3>FY2025 GGR By NIGC Region, With Change Vs. FY2024</h3>
+          <div data-draw="regions"></div>
+        </div>
+      </div>
+      <div class="tg-card tg-conc">
+        <h3>Revenue Concentration · FY2025</h3>
+        <div class="tg-scroll">
+          <table class="tg-table">
+            <thead><tr><th>Operation size (annual GGR)</th><th>Share of operations</th><th>Share of total GGR</th></tr></thead>
+            <tbody data-draw="ranges"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="tg-tab" id="tab-tribes" role="tabpanel" hidden>
+    <section class="tg-section" id="tribes-in-news">
+      <div class="tg-h2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="16" cy="16" r="3"/><circle cx="16" cy="16" r="8"/><circle cx="16" cy="16" r="13"/></svg><h2>Tribes In The News</h2></div>
+      <hr class="tg-rule">
+      <div class="tin-head-row">
+        <p class="tin-summary"><span data-period="30">In the last 30 days, Pechanga.net ran <b data-draw="tin-s30">—</b> stories naming <b data-draw="tin-t30">—</b> different tribes. The leading issue: <b data-draw="tin-i30">—</b>.</span><span data-period="7" hidden>In the last 7 days, Pechanga.net ran <b data-draw="tin-s7">—</b> stories naming <b data-draw="tin-t7">—</b> different tribes. The leading issue: <b data-draw="tin-i7">—</b>.</span></p>
+        <div class="tin-toggle" role="group" aria-label="Time period">
+          <button type="button" class="on" data-tin-period="30" aria-pressed="true">Last 30 days</button>
+          <button type="button" data-tin-period="7" aria-pressed="false">Last 7 days</button>
+        </div>
+      </div>
+      <div class="tin-layout">
+        <div class="tin-left">
+          <div class="tg-card">
+            <h3>Most-Mentioned Tribes</h3>
+            <p class="tin-hint">Number of Pechanga.net stories naming each tribe. Select a tribe to see its stories.</p>
+            <ul class="tin-rank" data-draw="tin-tribes"></ul>
+            <div class="tg-more" data-draw="tin-tribes-more"></div>
+          </div>
+          <div class="tg-card">
+            <h3>Top Issues</h3>
+            <p class="tin-hint">Stories on tribal topics, grouped by issue. Select an issue to see its stories.</p>
+            <ul class="tin-rank" data-draw="tin-issues"></ul>
+            <div class="tg-more" data-draw="tin-issues-more"></div>
+          </div>
+        </div>
+        <div class="tg-card tin-stories" aria-live="polite">
+          <div data-draw="tin-stories"></div>
+        </div>
+      </div>
+      <div class="tg-card tin-panel">
+        <h3>Issue Coverage By Week · Last 4 Weeks</h3>
+        <p class="tin-hint">Each card tracks one issue's weekly story count, with this week's total and the change from last week. Select a card to open its stories here, or select a point on the trend line to see that week's stories.</p>
+        <div data-draw="tin-heat"></div>
+      </div>
+    </section>
+  </div>
+
+  <details class="tg-foot" id="about">
+    <summary>About this data and sources</summary>
+    <ul>
+      <li>Revenue: NIGC FY2025 Gross Gaming Revenue Report (July 2026) and prior NIGC annual releases. FY2019–FY2023 totals are as rounded by NIGC.</li>
+      <li>The “$25M–$250M” concentration row is derived by subtracting NIGC's published top and bottom brackets from 100%.</li>
+      <li>Litigation and policy: compiled by Pechanga.net and checked against Mick Bransfield's Prediction Market Litigation Tracker (mickbransfield.com), court dockets and court reporting. Statuses change quickly; the tracker is reviewed every morning and changes are published only when confirmed by a court record or two independent reports.</li>
+      <li>Tribes In The News: Pechanga.net stories from the last 30 days. Tribes are identified by matching each story's headline and summary against a list of federally recognized tribes, their common short names and their casino brands (for example, Foxwoods for the Mashantucket Pequot). Each story is tagged with up to two issues using keyword rules. Tagging is automated and lightly reviewed, so occasional misses or extra matches are possible. Duplicate headlines are counted once.</li>
+      <li>Map outlines: U.S. Census Bureau boundaries via the us-atlas project.</li>
+    </ul>
+    <p class="tg-credit">A free service of <a href="https://pechanga.net/">Pechanga.net</a>.</p>
+  </details>
+</div>
+
+<script src="vendor/d3.min.js"></script>
+<script src="us-map.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
