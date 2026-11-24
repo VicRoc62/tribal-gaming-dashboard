@@ -106,27 +106,51 @@ def parse_date(page, text):
     return ""
 
 
+MON3 = {m[:3]: i for m, i in MONTHS.items()}
+
+
+def field(page, name):
+    """Text of a Bulletlink CMS field, e.g. data-cms-field="heading"."""
+    m = re.search(r'data-cms-field="%s"[^>]*>(.*?)(?:<div|</span>)' % re.escape(name), page, re.S | re.I)
+    return strip_tags(m.group(1)) if m else ""
+
+
+def story_date(page, today=None):
+    """Bulletlink story pages show month and day (e.g. NOV 23); the year comes from the
+    article image path (articles-YYYY-MM-DD) when present, else the most recent past year."""
+    m = re.search(r'month_DEF">\s*(\w+)\s*</div>\s*<div class="date_DEF">\s*(\d{1,2})', page)
+    img = re.search(r"articles-(\d{4})-(\d{2})-(\d{2})", page)
+    if m and m.group(1)[:3].lower() in MON3:
+        mon, day = MON3[m.group(1)[:3].lower()], int(m.group(2))
+        today = today or dt.date.today()
+        year = today.year if (mon, day) <= (today.month, today.day) else today.year - 1
+        if img and int(img.group(2)) == mon:
+            year = int(img.group(1))
+        try:
+            return dt.date(year, mon, day).isoformat()
+        except ValueError:
+            pass
+    if img:
+        return "%s-%s-%s" % img.groups()
+    return parse_date(page, strip_tags(page)[:4000])
+
+
 def parse_story(sid, page):
-    title = meta(page, "og:title")
-    if not title:
-        m = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S | re.I)
-        title = strip_tags(m.group(1)) if m else ""
+    title = field(page, "heading") or meta(page, "og:title")
     if not title:
         m = re.search(r"<title>(.*?)</title>", page, re.S | re.I)
         title = strip_tags(m.group(1)) if m else ""
-    title = re.sub(r"\s*[|\-–—]\s*Pechanga\.net.*$", "", title, flags=re.I).strip()
-    if not title or re.search(r"not found|page cannot|error", title, re.I):
+    if not title or re.search(r"page not found|page cannot", title, re.I):
         return None
-    summary = meta(page, "og:description") or meta(page, "description")
-    body = strip_tags(page)
-    date = parse_date(page, body[:4000])
+    desc = meta(page, "og:description") or meta(page, "description")
+    body = field(page, "body")
+    summary = (desc + " " + body[:500]).strip()
+    m = re.search(r'class="menu_DEF[^"]*">([^<]+)<', page)
+    category = m.group(1).strip().title() if m else ""
     url = meta(page, "og:url")
-    m = re.search(r'<link[^>]+rel=["\']canonical["\'][^>]*href=["\']([^"\']+)', page, re.I)
-    if m:
-        url = m.group(1)
     if not url or not url.startswith("http"):
         url = STORY_URL.format(id=sid)
-    return {"story_id": sid, "date": date, "headline": title, "url": url, "summary": summary[:600]}
+    return {"story_id": sid, "date": story_date(page), "headline": title, "url": url, "category": category, "summary": summary[:700]}
 
 
 def compile_rules():
@@ -245,6 +269,7 @@ def main():
     mentions = build_mentions(out)
     for s in out:
         s.pop("_states", None)
+        s["summary"] = (s.get("summary") or "")[:240]
     # keep raw cache trimmed to a little more than the window
     cutoff = (start - dt.timedelta(days=7)).isoformat()
     with open(args.cache, "w", encoding="utf-8") as f:
