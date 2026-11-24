@@ -155,10 +155,11 @@
   "jurisdiction": "Utah",
   "court": "Utah state court and federal court",
   "type": "State vs. federal",
-  "latest_action": "Federal judge heard the CFTC's request to halt Utah's criminal and civil cases against Kalshi, saying gambling regulation sits within states' police powers, but has not ruled",
-  "date": "2026-11-20",
-  "leaning": "Pending",
-  "next_step": "Ruling on the CFTC request; Kalshi arraignment Dec 4"
+  "latest_action": "Kalshi halted new trading in Utah (Nov 23) after its federal court losses; on Nov 24 Utah moved to dismiss the criminal charges against Kalshi and its founders without prejudice. Utah's civil suit and the CFTC's federal case continue",
+  "date": "2026-11-24",
+  "leaning": "States",
+  "next_step": "Court ruling on Utah's dismissal motion; ruling on the CFTC's request to halt Utah's cases",
+  "source_url": "https://www.clickondetroit.com/business/2026/11/24/utah-asks-to-drop-charges-against-kalshi-and-its-founders-after-kalshi-halts-trading-there/"
  },
  {
   "case": "New York v. Kalshi / CFTC v. New York",
