@@ -115,10 +115,11 @@
   "jurisdiction": "Michigan",
   "court": "Michigan state court / 6th Cir.",
   "type": "State regulation",
-  "latest_action": "Kalshi appealed to the Sixth Circuit; Attorney General now seeking to hold Kalshi in contempt",
-  "date": "2026-07-27",
+  "latest_action": "Contempt hearing held Nov 24 on the Attorney General's motion over Kalshi's sports-wagering ads targeted at Michigan residents; Judge Rosemarie Aquilina called the ads \"extreme and targeted\" but issued no ruling. Kalshi's Sixth Circuit appeal continues",
+  "date": "2026-11-24",
   "leaning": "States",
-  "next_step": "Contempt hearing Nov 24"
+  "next_step": "Ruling on the contempt motion (AG seeks $7,500 per violation)",
+  "source_url": "https://news.bloomberglaw.com/daily-labor-report/kalshi-stares-down-contempt-for-michigan-sports-wagering-ads"
  },
  {
   "case": "KalshiEX v. Flaherty (New Jersey)",
