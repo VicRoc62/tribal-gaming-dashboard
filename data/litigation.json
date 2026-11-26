@@ -22,12 +22,13 @@
  {
   "case": "Seminole Tribe of Florida v. DraftKings",
   "jurisdiction": "Florida",
-  "court": "Broward County Circuit Court (DraftKings moved it to federal court)",
+  "court": "S.D. Fla. (removed by DraftKings from Broward County Circuit Court)",
   "type": "Tribal",
-  "latest_action": "72-page suit alleges DraftKings Predictions and Pick6 are illegal sports betting that violates the Tribe's exclusive 2021 compact",
-  "date": "2026-10-08",
+  "latest_action": "Florida Attorney General moved to intervene on the Tribe's side, with a proposed complaint alleging DraftKings Predictions and Pick6 are an unlicensed sportsbook and seeking disgorgement and lost tax revenue; underlying suit says the products violate the Tribe's exclusive 2021 compact",
+  "date": "2026-11-24",
   "leaning": "Pending",
-  "next_step": "Fight over which court hears the case"
+  "next_step": "Ruling on Florida's motion to intervene; fight over which court hears the case",
+  "source_url": "https://www.casino.org/news/florida-ag-seeks-to-join-seminoles-suit-against-draftkings/"
  },
  {
   "case": "Ho-Chunk Nation v. Kalshi",
